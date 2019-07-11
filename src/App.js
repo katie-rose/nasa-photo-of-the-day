@@ -6,29 +6,30 @@ import Date from "./components/Date";
 import Image from "./components/Image";
 
 function App() {
-const [nasaData, setNasaData] = useState([]);
-console.log(nasaData);
-
-useEffect(() => {
-  axios
-    .get(
-      `https://api.nasa.gov/planetary/apod?api_key=t5gHMLnB9lijRBpavUdSI9c1cc3J82mHj9Fy6C0U&date=2008-10-17`
-    )
-    .then(res => {
-      console.log(res.data);
-      setNasaData(res.data);
-    })
-    .then(console.log(nasaData))
-    .catch(err => console.log(err));
-}, []);
+  const [nasaData, setNasaData] = useState([]);
+  const [date, setDate] = useState("");
+  
+  useEffect(() => {
+    axios
+      .get(
+        `https://api.nasa.gov/planetary/apod?api_key=t5gHMLnB9lijRBpavUdSI9c1cc3J82mHj9Fy6C0U&${date}`
+      )
+      .then(res => {
+        console.log(res.data);
+        setNasaData(res.data);
+      })
+      .then(console.log(nasaData))
+      .catch(err => console.log(err));
+  }, []);
 
   return (
     <div className="App">
+      <h1>What Was The NASA Photo Of The Day On Your Birthday?</h1>
+      <Date date={date} setDate={setDate} nasaData={nasaData} />
       <Title nasaData={nasaData} />
-      <Date nasaData={nasaData} />
       <Image nasaData={nasaData} />
     </div>
   );
-};
+}
 
 export default App;
