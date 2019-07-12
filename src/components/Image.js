@@ -11,7 +11,7 @@ const Paragraph = styled.p`
 
   @media only screen and (max-width: 600px) {
     width: 95%;
-    margin: 0;
+    margin-left: 0;
     padding: 25px;
     text-align: left;
   }
