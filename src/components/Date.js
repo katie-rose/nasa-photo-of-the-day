@@ -10,6 +10,13 @@ const Input = styled.input`
   background: #000;
   border: 1px solid white;
   border-radius: 3px;
+
+  @media only screen and (max-width: 600px) {
+    width: 25%;
+    margin: 10px;
+    padding: 15px;
+    text-align: left;
+  }
 `;
 
 const Button = styled.button`
