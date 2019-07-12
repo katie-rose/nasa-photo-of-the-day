@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        `https://api.nasa.gov/planetary/apod?api_key=t5gHMLnB9lijRBpavUdSI9c1cc3J82mHj9Fy6C0U&${date}`
+        `https://api.nasa.gov/planetary/apod?api_key=t5gHMLnB9lijRBpavUdSI9c1cc3J82mHj9Fy6C0U${date}`
       )
       .then(res => {
         console.log(res.data);
@@ -20,12 +20,13 @@ function App() {
       })
       .then(console.log(nasaData))
       .catch(err => console.log(err));
-  }, []);
+  }, [ date ]);
 
   return (
     <div className="App">
       <h1>What Was The NASA Photo Of The Day On Your Birthday?</h1>
-      <Date date={date} setDate={setDate} nasaData={nasaData} />
+      <h2><em>Data only available since 06-20-1995</em></h2>
+      <Date date={date} setDate={setDate} nasaData={nasaData} setNasaData={setNasaData} />
       <Title nasaData={nasaData} />
       <Image nasaData={nasaData} />
     </div>

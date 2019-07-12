@@ -13,7 +13,7 @@ const Paragraph = styled.p`
 export default function Image(props) {
   return (
     <div>
-      <img src={props.nasaData.hdurl} width="680px" alt="NASA" />
+      <img src={props.nasaData.hdurl} width="580px" alt="NASA Photo Of The Day" />
       <Paragraph>{props.nasaData.explanation}</Paragraph>
     </div>
   );

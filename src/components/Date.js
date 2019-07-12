@@ -33,7 +33,7 @@ export default function Date(props) {
         const newDate = `&date=${year}-${month}-${day}`
         console.log(newDate);
         props.setDate(newDate);
-        props.nasaData({});
+        props.setNasaData({});
   }
     const clearDate = ()=> {
         setDay('');
@@ -42,14 +42,26 @@ export default function Date(props) {
         props.setDate('');
     }
     return (
-        <div>
-            <Input onChange={e => setDay(e.target.value)} value={day} placeholder="Day"/>
-            <Input onChange={e => setMonth(e.target.value)} value={month} placeholder="Month"/>
-            <Input onChange={e => setYear(e.target.value)} value={year} placeholder="Year"/>
-            <Button onClick={dateHandler}>View</Button>
-            <Button onClick={clearDate}>Back to Today</Button>
-        </div>
-    )
+      <div>
+        <Input
+          onChange={e => setMonth(e.target.value)}
+          value={month}
+          placeholder="Month"
+        />
+        <Input
+          onChange={e => setDay(e.target.value)}
+          value={day}
+          placeholder="Day"
+        />
+        <Input
+          onChange={e => setYear(e.target.value)}
+          value={year}
+          placeholder="Year"
+        />
+        <Button onClick={dateHandler}>View</Button>
+        <Button onClick={clearDate}>Back to Today</Button>
+      </div>
+    );
 }
 
 
