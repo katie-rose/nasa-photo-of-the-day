@@ -7,13 +7,24 @@ const Paragraph = styled.p`
   width: 80%;
   margin-left: 120px;
   background-color: black;
-  opacity: .6;
+  opacity: 0.6;
+
+  @media only screen and (max-width: 600px) {
+    width: 95%;
+    margin: 0;
+    padding: 25px;
+    text-align: left;
+  }
 `;
 
 export default function Image(props) {
   return (
     <div>
-      <img src={props.nasaData.hdurl} width="580px" alt="NASA Photo Of The Day" />
+      <img
+        src={props.nasaData.hdurl}
+        width="580px"
+        alt="NASA Photo Of The Day"
+      />
       <Paragraph>{props.nasaData.explanation}</Paragraph>
     </div>
   );
