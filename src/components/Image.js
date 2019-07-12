@@ -10,23 +10,23 @@ const Paragraph = styled.p`
   opacity: 0.6;
 
   @media only screen and (max-width: 600px) {
-    width: 95%;
-    margin-left: 0;
-    padding: 25px;
+    width: 90%;
+    margin: 0;
+    padding-left: 10px;
     text-align: left;
   }
 
   @media only screen and (max-width: 700px) {
     width: 90%;
-    margin-left: 0;
-    padding: 25px;
+    margin: 0;
+    padding-left: 15px;
     text-align: left;
   }
 
   @media only screen and (max-width: 812px) {
     width: 90%;
-    margin-left: 0;
-    padding: 25px;
+    margin: 0;
+    padding-left: 15px;
     text-align: left;
   }
 `;
