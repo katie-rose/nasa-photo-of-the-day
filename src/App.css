@@ -40,7 +40,7 @@ a:active {
   color: #61dafb;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) and (max-width: 700px) and (max-width: 812px) {
   body {
     display: flex;
     flex-direction: column;
@@ -48,6 +48,7 @@ a:active {
 
   .App {
     width: 100%;
+    background-color: black;
   }
 
   h1 {

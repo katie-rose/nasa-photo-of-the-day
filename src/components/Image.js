@@ -17,14 +17,14 @@ const Paragraph = styled.p`
   }
 
   @media only screen and (max-width: 700px) {
-    width: 95%;
+    width: 90%;
     margin-left: 0;
     padding: 25px;
     text-align: left;
   }
 
   @media only screen and (max-width: 812px) {
-    width: 95%;
+    width: 90%;
     margin-left: 0;
     padding: 25px;
     text-align: left;
@@ -37,7 +37,7 @@ export default function Image(props) {
       <img
         src={props.nasaData.hdurl}
         width="580px"
-        alt="NASA Photo Of The Day"
+        alt="NASA"
       />
       <Paragraph>{props.nasaData.explanation}</Paragraph>
     </div>
